@@ -23,6 +23,7 @@ def predict(input, max_length, top_p, temperature, history=None):
         yield [history] + updates
 
 
+
 with gr.Blocks() as demo:
     state = gr.State([])
     text_boxes = []
