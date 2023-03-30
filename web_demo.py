@@ -17,7 +17,7 @@ def predict(input, max_length, top_p, temperature, history=None):
         updates = []
         for query, response in history:
             updates.append(gr.update(visible=True, value="用户：" + query))
-            updates.append(gr.update(visible=True, value="ChatGLM-6B：" + response))
+            updates.append(gr.update(visible=True, value="雄伟的AI：" + response))
         if len(updates) < MAX_BOXES:
             updates = updates + [gr.Textbox.update(visible=False)] * (MAX_BOXES - len(updates))
         yield [history] + updates
